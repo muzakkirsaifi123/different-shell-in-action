@@ -1,28 +1,31 @@
-name: shell commands
+name: Diffrent Shell
 
-on: [push]
+on: [workflow_dispatch]
+
 
 jobs: 
   run-shell-commands:
     runs-on: ubuntu-latest
     steps: 
       - name: string
-        run: echo "Welcome to Devopshint!!"
-      - name: multiline script
+        run: echo "Welcome to Example of github action!!"
+      - name: Run the multiline 
         run: |
           node -v
           npm -v
-      - name: python command
+      - name: python command to print the processor
         run: |
           import platform
           print(platform.processor())
+
         shell: python
 
   run-windows-command:
     runs-on: windows-latest
     steps:
-      - name: Directort Powershell
+      - name: Directory Powershell
         run: Get-Location
+
       - name: Directort Bash
         run: pwd
         shell: bash
