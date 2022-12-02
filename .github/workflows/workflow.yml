@@ -1,4 +1,4 @@
-name: Diffrent Shell
+name: Different Shell
 
 on: [workflow_dispatch]
 
